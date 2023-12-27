@@ -1,3 +1,2 @@
 mysql:
-  dns: root:123456@tcp(49.235.107.169)/online_course_assignment?charset=utf8mb4&parseTime=True&loc=Local
-  
+  dns: root:123456@tcp(127.0.0.1:3306)/online_course_assignment?charset=utf8mb4&parseTime=True&loc=Local

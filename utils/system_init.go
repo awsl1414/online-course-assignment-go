@@ -38,8 +38,11 @@ func InitMySQL() {
 	DB, _ = gorm.Open(mysql.Open(viper.GetString("mysql.dns")), &gorm.Config{Logger: newLogger})
 
 	// 迁移schema
+	DB.AutoMigrate(&models.DetailClass{})
 	DB.AutoMigrate(&models.OriginClass{})
 	DB.AutoMigrate(&models.Floors{})
+	DB.AutoMigrate(&models.User{})
+	DB.AutoMigrate(&models.Software{})
 
 	fmt.Println("mysql inited")
 }
